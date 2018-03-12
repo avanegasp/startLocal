@@ -106,7 +106,7 @@
                       <% end %>
                       <% if comment.comment_type =="correo" %>
                   <li><p class="topApplicant_date"> <%= comment.created_at.strftime("%B %d at %I:%M %p") %></p>
-                      <p><%=user.profile["first_name"] %> <%=user.profile["last_name"]%> envío un correo con asunto: <%=comment.info["subject"]%> </p>
+                    <p><%=user.profile["first_name"] %> <%=user.profile["last_name"]%> envío un correo con asunto: <%=comment.info["subject"]%> </p>
                       <p class="topApplicant_message"><%= comment.comment %></p>
                       <hr style="border: solid 1px #dbdee1">
                   </li>
@@ -116,7 +116,7 @@
                        <p> Se creo la aplicación. </p>
                        <hr style="border: solid 1px #dbdee1">
                    </li>
-              </ul> 
+              </ul>
             </div>
           </div>
         </div>
