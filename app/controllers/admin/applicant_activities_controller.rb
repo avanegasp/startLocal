@@ -2,9 +2,8 @@ class Admin::ApplicantActivitiesController < ApplicationController
 	def index
 	end
 
-	def create 
+	def create
 		
-
 		puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		puts params
 		puts params[:comment_type]
@@ -25,7 +24,7 @@ class Admin::ApplicantActivitiesController < ApplicationController
 			@applicant_activity= ApplicantActivity.new(applicant_activity_params)
 			@applicant_activity.save
 		end
-			
+
 		# @applicantActivity = ApplicantActivity.new(applicant_activity_params)
 		# @applicantActivity.save
 		# @email_application_activity = EmailApplicationActivity.new([:subject=>params[:subject],[:body=>params[:body]])
