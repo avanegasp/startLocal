@@ -201,7 +201,14 @@ Rails.application.routes.draw do
         post 'assign_points'
       end
     end
+<<<<<<< HEAD
     resources :aplications
+=======
+
+    resources :applicants
+    resources :applicant_activities
+    resources :email_templates
+>>>>>>> e9ee5bd9e2174a61653937a909e9899360d19cff
     resources :charges
 
     resources :badges

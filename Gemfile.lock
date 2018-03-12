@@ -401,7 +401,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5.0)
   faker (~> 1.4.3)
   figaro
-  font-awesome-sass
+  font-awesome-sass (= 4.7.0)
   friendly_id (~> 5.1.0)
   gendered
   gravatar-ultimate

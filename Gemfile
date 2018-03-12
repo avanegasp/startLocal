@@ -51,7 +51,7 @@ gem 'momentjs-rails'
 gem 'rails_12factor', group: :production
 
 gem 'omniauth-slack'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '4.7.0'
 gem 'nested_form_fields'
 gem 'annotate'
 
