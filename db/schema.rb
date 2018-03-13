@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180307213334) do
-=======
 ActiveRecord::Schema.define(version: 20180313152614) do
->>>>>>> d21c9aabf5808cf70d1514b1229b578ea8c3df55
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,11 +34,6 @@ ActiveRecord::Schema.define(version: 20180313152614) do
   create_table "applicant_activities", force: :cascade do |t|
     t.integer  "applicant_id"
     t.integer  "user_id"
-<<<<<<< HEAD
-    t.integer  "comment_type"
-    t.text     "comment"
-=======
->>>>>>> d21c9aabf5808cf70d1514b1229b578ea8c3df55
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.hstore   "info"
