@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   namespace :admin do
   get 'aplications/index'
   end
 
+=======
+>>>>>>> d21c9aabf5808cf70d1514b1229b578ea8c3df55
   root 'pages#home'
 
   get "curriculum", to: "pages#curriculum"
@@ -202,8 +205,16 @@ Rails.application.routes.draw do
       end
     end
 
+<<<<<<< HEAD
     resources :applicants
     resources :applicant_activities
+=======
+    resources :top_applicants do
+      resources :note_applicant_activities, only: [:create]
+      resources :change_status_applicant_activities, only: [:new, :create]
+      resources :email_applicant_activities, only: [:new, :create]
+    end
+>>>>>>> d21c9aabf5808cf70d1514b1229b578ea8c3df55
     resources :email_templates
     resources :charges
 

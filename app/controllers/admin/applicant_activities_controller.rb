@@ -1,4 +1,5 @@
 class Admin::ApplicantActivitiesController < ApplicationController
+<<<<<<< HEAD
 	def index
 	end
 
@@ -24,6 +25,31 @@ class Admin::ApplicantActivitiesController < ApplicationController
 			@applicant_activity= ApplicantActivity.new(applicant_activity_params)
 			@applicant_activity.save
 		end
+=======
+  before_action :admin_access
+
+  def create
+    if params[:comment_type].to_i == 0
+      @topApplicant = TopApplicant.find(params[:applicant_id])
+      params[:past_status]=@topApplicant.status
+    if params[:status]
+      @topApplicant.update(:status => params[:status])
+    end
+      params[:current_status]=@topApplicant.status
+      @change_status_application_activity = ChangeStatusApplicationActivity.new(applicant_activity_params)
+      @change_status_application_activity.save
+    elsif params[:comment_type].to_i == 2
+      @topApplicant = TopApplicant.find(params[:applicant_id])
+      @email_application_activity = EmailApplicationActivity.new(applicant_activity_params)
+      TopApplicantMailer.top_applicant_mail(@topApplicant,applicant_activity_params[:subject],applicant_activity_params[:body]).deliver
+      @email_application_activity.save
+    elsif params[:comment_type].to_i == 1
+      @applicant_activity= ApplicantActivity.new(applicant_activity_params)
+      @applicant_activity.save
+    end
+  redirect_to admin_applicant_path(applicant_activity_params[:applicant_id])
+  end
+>>>>>>> d21c9aabf5808cf70d1514b1229b578ea8c3df55
 
 		# @applicantActivity = ApplicantActivity.new(applicant_activity_params)
 		# @applicantActivity.save
