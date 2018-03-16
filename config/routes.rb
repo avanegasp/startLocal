@@ -226,7 +226,6 @@ Rails.application.routes.draw do
     end
     resources :email_templates
     resources :charges
-
     resources :badges
     resources :levels
     resources :badge_ownerships, only: [:new, :create]
