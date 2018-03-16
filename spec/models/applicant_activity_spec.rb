@@ -2,6 +2,7 @@
 #
 # Table name: applicant_activities
 #
+<<<<<<< HEAD
 #  id             :integer          not null, primary key
 #  applicant_id   :integer
 #  user_id        :integer
@@ -15,6 +16,15 @@
 #  past_status    :string
 #  subject        :string
 #  body           :text
+=======
+#  id           :integer          not null, primary key
+#  applicant_id :integer
+#  user_id      :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  info         :hstore
+#  type         :string
+>>>>>>> 8d47a6cd8669436c2acf0afdbec97e2147f8d226
 #
 
 require 'rails_helper'

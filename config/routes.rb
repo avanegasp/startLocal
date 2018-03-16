@@ -72,6 +72,20 @@ Rails.application.routes.draw do
   resource :password, only: [:edit, :update]
   resource :password_reset, except: [:index, :show]
 
+  scope :top, as: "top_program" do
+    get :challenge, to: "top_program#challenge"
+    post :challenge, to: "top_program#submit_challenge"
+    get :test, to: "top_program#test"
+    post :test, to: "top_program#submit_test"
+    get :submitted, to: "top_program#submitted"
+  end
+
+
+  resources :interviews, only: [:new, :create] do
+    get :challenge, on: :collection
+    post :submit_challenge, on: :collection
+  end
+
   resources :users do
     collection do
       get :activate, action: 'activate_form'
@@ -202,6 +216,7 @@ Rails.application.routes.draw do
       end
     end
 <<<<<<< HEAD
+<<<<<<< HEAD
     resources :aplications
 =======
 
@@ -209,6 +224,15 @@ Rails.application.routes.draw do
     resources :applicant_activities
     resources :email_templates
 >>>>>>> e9ee5bd9e2174a61653937a909e9899360d19cff
+=======
+
+    resources :top_applicants do
+      resources :note_applicant_activities, only: [:create]
+      resources :change_status_applicant_activities, only: [:new, :create]
+      resources :email_applicant_activities, only: [:new, :create]
+    end
+    resources :email_templates
+>>>>>>> 8d47a6cd8669436c2acf0afdbec97e2147f8d226
     resources :charges
 
     resources :badges
