@@ -215,24 +215,16 @@ Rails.application.routes.draw do
         post 'assign_points'
       end
     end
-<<<<<<< HEAD
-<<<<<<< HEAD
-    resources :aplications
-=======
 
     resources :applicants
     resources :applicant_activities
     resources :email_templates
->>>>>>> e9ee5bd9e2174a61653937a909e9899360d19cff
-=======
-
     resources :top_applicants do
       resources :note_applicant_activities, only: [:create]
       resources :change_status_applicant_activities, only: [:new, :create]
       resources :email_applicant_activities, only: [:new, :create]
     end
     resources :email_templates
->>>>>>> 8d47a6cd8669436c2acf0afdbec97e2147f8d226
     resources :charges
 
     resources :badges

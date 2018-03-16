@@ -1,8 +1,15 @@
 <% if @template.valid? %>
-  $('#email-template-modal').each(function(){
+  $('#email-template-modal').on('click', function(){
       alert("works from email");
   });
   $('table tbody').append("<%= j render @template %>");
 <% else %>
+  invalidField(title)
   alert("debe ser algún error de validación");
 <% end %>
+
+
+
+function invalidField(field, message) {
+  $(field).parents(".form-group").addClass("has-error").append('<span class="help-block">' + message + '</span>');
+}
