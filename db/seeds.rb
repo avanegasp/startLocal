@@ -44,7 +44,7 @@ User.create(email: "german.escobar@makeitreal.camp", account_type: User.account_
 
 User.create(email: "user_free@makeitreal.camp",account_type: User.account_types[:free_account])
 
-User.create(email: "user_paid@makeitreal.camp",account_type: User.account_types[:paid_account])
+
 
 Path.create(name: "Full-Stack", description: "Conviértete en un desarrollador Full-Stack.", published: true)
 phase = Phase.create(name: "Programador Aprendiz", description: "Aprende los conceptos básicos del desarrollo web.", slug: "programador-aprendiz", published: true, color: "#3590BE", path_id: 1)

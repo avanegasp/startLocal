@@ -83,12 +83,15 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5.2'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'faker', '~> 1.4.3'
+  gem "chromedriver-helper"
 end
 
 group :development do
   gem 'letter_opener'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  #gem 'pry-rails'
+
 end
 
 group :test do
