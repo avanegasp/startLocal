@@ -47,7 +47,7 @@ RSpec.feature "top_applicant", type: :feature do
     sleep 2
     expect(TopApplicant.find(top_applicant.id).status).to eq("accepted")
   end
-  
+
   scenario "Allow to send an email in top applicant application", js: true do
     ActionMailer::Base.deliveries.clear
     user = User.create(email:"pepito@one.com",first_name:"Pepito", last_name:"gomez",password:"1234566", level_id: $2,  status: :active, account_type: :admin_account, access_type: :password)
@@ -76,5 +76,4 @@ RSpec.feature "top_applicant", type: :feature do
     email = ActionMailer::Base.deliveries
     expect(email.count).to eq(1)
   end
-   
 end
