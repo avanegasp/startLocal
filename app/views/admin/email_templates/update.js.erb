@@ -1,19 +1,2 @@
-// # <% if @template.errors.any? %>
-// #     $('.errors').remove()
-// #     $('.container-fluid').prepend("<%= j (render 'errors') %>")
-// # <% else %>
-// #     // $('#title').text("<%= j (render 'title') %>");
-// #     // $('#subject').text("<%= j (render 'subject') %>");
-// #     // $('#body').text("<%= j (render 'body') %>");
-// #     $('#email-template-modal').modal('hide')
-// # <% end %>
-
-
-  <% if @template.errors.any? %>
-    $('.modal-body').prepend("<%= j (render 'errors') %>")
-  <%else%>
-    $('#title').text("<%= j (render 'title') %>");
-    $('#subject').text("<%= j (render 'subject') %>");
-    $('#body').text("<%= j (render 'body') %>");
-    $('.modal-body').modal('hide')
-  <%end%>
+$('tbody').html("<%= j render @templates %>")
+$('.modal').modal('hide')

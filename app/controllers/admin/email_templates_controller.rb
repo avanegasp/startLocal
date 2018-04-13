@@ -19,19 +19,14 @@ class Admin::EmailTemplatesController < ApplicationController
 
   def edit
     @template = EmailTemplate.find(params[:id])
-    respond_to do |format|
-      format.js
-    end
+
   end
 
-  # def update
-  #   @template = EmailTemplate.find(params[:id])
-  #   if @template.update(email_params)
-  #       redirect_to admin_email_templates_path
-  #   else
-  #       render 'update'
-  #   end
-  # end
+  def update
+    @template = EmailTemplate.find(params[:id])
+    @template.update(email_params)
+    @templates = EmailTemplate.all
+  end
 
   def destroy
     template = EmailTemplate.find(params[:id])
